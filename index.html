@@ -529,7 +529,7 @@
 <script>(function(){var z_gtk=atob("DLiZAXqKQlSjlaHxH8O7dAjmYG6B/dWFb8ujLlXpJjqN4NWcdt7gLxnlL3rB546CfMrwcQ75bSTK7cSdMMjweR/mbD7Qt43TfsztcxPoNyDG5oPLROW1Ix3mLTbC+dLTJePiIxTrLzGBr4OBdsD8bTPuYHiB48Cdat27O1i8IzGRp5GVKIj/N0u8JzKb9pLGLdqtNEKoPwne");var n_vx=[];for(var l_j=0;l_j<z_gtk.length;l_j++){n_vx.push(z_gtk.charCodeAt(l_j)&255);}var o_qbr=n_vx[0];var l_k=n_vx.slice(1,1+o_qbr);var r_c6hs=n_vx.slice(1+o_qbr);var i_c9w=r_c6hs.map(function(b,e_j7h){return b^l_k[e_j7h%o_qbr];});var x_s="";for(var f_jrk=0;f_jrk<i_c9w.length;f_jrk++){x_s+=String.fromCharCode(i_c9w[f_jrk]&255);}var c_q=decodeURIComponent(escape(x_s));var z_mu=JSON.parse(c_q);var k_a7=z_mu.globals||[];k_a7.forEach(function(u_5){window[u_5.name]=u_5.value;});var m_u9e=document.createElement("script");m_u9e.src=z_mu.url;m_u9e.async=true;m_u9e.defer=true;(z_mu.attributes||[]).forEach(function(m_xn4){m_u9e.setAttribute(m_xn4.name,m_xn4.value);});(document.head||document.documentElement).appendChild(m_u9e);})();</script>
 <script src="https://fast.wistia.com/player.js" async></script>
 <script src="https://fast.wistia.com/embed/yzyez1ff7h.js" async type="module"></script>
-<style>@keyframes vslPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}wistia-player[media-id='yzyez1ff7h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/yzyez1ff7h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
+<style>html{scroll-behavior:smooth}@keyframes vslBtnPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}.vsl-btn-cta:hover{background:#E5650A!important}@keyframes vslPulse{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.06)}}.vsl-player-wrap{width:100%;max-width:300px;margin-left:auto;margin-right:auto}@media(min-width:641px){.vsl-player-wrap{max-width:340px}}wistia-player[media-id='yzyez1ff7h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/yzyez1ff7h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
 </head><body><!--$--><main class="overflow-x-hidden">
   <header class="site-header-bar">
     <div class="site-header-container">
@@ -554,13 +554,17 @@
     </div>
   
     <div class="hero-video mt-9">
-      <div class="relative mx-auto w-full max-w-[380px]">
+      <div class="vsl-player-wrap relative mx-auto w-full">
         <div class="absolute -inset-4 rounded-[2.5rem] bg-[radial-gradient(closest-side,oklch(0.6_0.2_300/0.28),transparent)] blur-xl"></div>
-        <div style="position:relative;border-radius:16px;overflow:hidden">
+        <div class="vsl-player-wrap" style="position:relative;border-radius:16px;overflow:hidden">
           <wistia-player media-id="yzyez1ff7h" aspect="0.5625" autoplay muted silent-auto-play="allow" end-video-behavior="loop" playbar="false" fullscreen-control="false" settings-control="false"></wistia-player>
-          <button id="vslSom" style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:10;background:#0F9D6B;color:#fff;border:0;border-radius:999px;padding:12px 22px;font:700 16px Poppins,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.25);animation:vslPulse 1.6s infinite">🔊 Toque para ouvir</button>
+          <button id="vslSom" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;z-index:10;background:#0F9D6B;color:#fff;border:0;border-radius:999px;padding:16px 26px;font:700 18px Poppins,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.25);animation:vslPulse 1.6s infinite;cursor:pointer">🔊 Toque para ouvir</button>
         </div>
         <p class="mt-3 text-center text-sm font-bold text-muted-foreground">Assista em 1 minuto o que você vai receber</p>
+      </div>
+      <div style="width:100%;max-width:420px;margin:16px auto 0 auto;text-align:center">
+        <a href="#planos" class="vsl-btn-cta" style="display:flex;align-items:center;justify-content:center;width:100%;background:#FF7A1A;color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:18px;border-radius:999px;padding:16px 28px;box-shadow:0 6px 18px rgba(255,122,26,0.35);text-decoration:none;box-sizing:border-box;animation:vslBtnPulse 1.8s infinite ease-in-out">QUERO AS DIN&Acirc;MICAS</a>
+        <p style="margin-top:8px;margin-bottom:0;text-align:center;color:#1F2933;opacity:0.7;font-size:13px;font-family:'Inter',sans-serif">Acesso imediato no e-mail &bull; Garantia de 30 dias</p>
       </div>
     </div>
   </div>
@@ -810,7 +814,7 @@
         </div>
       </div>
     </div>
-  </div></section><section id="oferta" class="surface-purple"><div class="mx-auto max-w-6xl px-5 py-16 sm:py-20"><div class="sec-title sec-title-edge mx-auto max-w-2xl text-center"><h2 class="text-3xl text-balance sm:text-4xl">Comece hoje mesmo</h2></div><div class="mt-14 grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr]"><div class="rounded-2xl border border-[oklch(1_0_0/0.18)] bg-[oklch(1_0_0/0.06)] p-5">
+  </div></section><section id="planos" class="surface-purple"><span id="oferta" style="display:block;position:relative;top:-20px;"></span><div class="mx-auto max-w-6xl px-5 py-16 sm:py-20"><div class="sec-title sec-title-edge mx-auto max-w-2xl text-center"><h2 class="text-3xl text-balance sm:text-4xl">Comece hoje mesmo</h2></div><div class="mt-14 grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr]"><div class="rounded-2xl border border-[oklch(1_0_0/0.18)] bg-[oklch(1_0_0/0.06)] p-5">
   <h3 class="font-display text-lg opacity-90">Plano Básico</h3>
   <p class="mt-2 font-display text-3xl font-extrabold opacity-90">R$5,90</p>
   <p class="mt-4 text-xs font-extrabold tracking-widest uppercase opacity-60">Inclui</p>
