@@ -319,13 +319,14 @@
     bottom: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
-    z-index: 2147483647 !important; /* Valor máximo de z-index do navegador */
+    height: 100dvh !important;
+    z-index: 2147483647 !important;
     background-color: rgba(0, 0, 0, 0.78) !important;
     backdrop-filter: blur(6px) !important;
     -webkit-backdrop-filter: blur(6px) !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 1.25rem !important;
+    padding: 0.75rem !important;
     box-sizing: border-box !important;
     overflow-y: auto !important;
   }
@@ -334,8 +335,255 @@
   }
   #modal-card-box {
     background: #ffffff !important;
-    color: #1f1d1a !important;
+    color: #1F2933 !important;
     box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 24px !important;
+    padding: 18px 16px 16px !important;
+    width: 100% !important;
+    max-width: 460px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    text-align: center !important;
+    border: 2px solid rgba(15, 157, 107, 0.22) !important;
+  }
+  @media (min-width: 640px) {
+    #modal-card-box {
+      padding: 28px 28px 24px !important;
+      max-width: 480px !important;
+    }
+  }
+  .upsell-badge-orange {
+    display: inline-block;
+    background-color: #FF7A1A;
+    color: #FFFFFF;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    line-height: 1.2;
+  }
+  .upsell-title {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 800 !important;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #1F2933 !important;
+    margin: 8px auto 0;
+    max-width: 360px;
+  }
+  @media (min-width: 640px) {
+    .upsell-title {
+      font-size: 24px;
+      margin-top: 10px;
+      max-width: 400px;
+    }
+  }
+  .upsell-compare-grid {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 10px;
+    margin-top: 12px;
+    align-items: stretch;
+  }
+  @media (min-width: 640px) {
+    .upsell-compare-grid {
+      gap: 12px;
+      margin-top: 16px;
+    }
+  }
+  .upsell-block-gray {
+    background-color: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .upsell-block-green {
+    background-color: #F0FDF6;
+    border: 2px solid #0F9D6B;
+    border-radius: 16px;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 20px -8px rgba(15, 157, 107, 0.25);
+  }
+  @media (min-width: 640px) {
+    .upsell-block-gray,
+    .upsell-block-green {
+      padding: 14px 12px;
+    }
+  }
+  .upsell-plan-name-gray {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #52606D;
+    line-height: 1.2;
+  }
+  .upsell-plan-sub-gray {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #7B8794;
+    margin-top: 2px;
+    line-height: 1.25;
+  }
+  .upsell-plan-price-gray {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #52606D;
+    margin-top: 6px;
+    line-height: 1.1;
+  }
+  .upsell-plan-name-green {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0B6B4A;
+    line-height: 1.2;
+  }
+  .upsell-plan-sub-green {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0F9D6B;
+    margin-top: 2px;
+    line-height: 1.25;
+  }
+  .upsell-plan-old-price {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #616E7C;
+    margin-top: 4px;
+    line-height: 1.2;
+  }
+  .upsell-plan-old-price s,
+  .upsell-plan-old-price span {
+    text-decoration: line-through;
+  }
+  .upsell-plan-price-green {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0F9D6B;
+    margin-top: 1px;
+    line-height: 1.1;
+  }
+  @media (min-width: 640px) {
+    .upsell-plan-price-gray {
+      font-size: 20px;
+    }
+    .upsell-plan-price-green {
+      font-size: 22px;
+    }
+  }
+  .upsell-checklist {
+    list-style: none !important;
+    margin: 12px auto 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: left !important;
+    max-width: 340px !important;
+  }
+  @media (min-width: 640px) {
+    .upsell-checklist {
+      margin-top: 16px !important;
+      gap: 8px !important;
+    }
+  }
+  .upsell-checklist li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-family: "Inter", system-ui, sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #1F2933 !important;
+    line-height: 1.3 !important;
+  }
+  @media (min-width: 640px) {
+    .upsell-checklist li {
+      font-size: 14.5px !important;
+    }
+  }
+  .upsell-check-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    border-radius: 9999px !important;
+    background-color: #0F9D6B !important;
+    color: #FFFFFF !important;
+    flex-shrink: 0 !important;
+  }
+  .upsell-check-icon svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
+  .btn-upsell-green {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+    padding: 13px 16px !important;
+    background-color: #0F9D6B !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+    font-family: "Poppins", system-ui, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 24px -8px rgba(15, 157, 107, 0.6) !important;
+    transition: transform 0.15s ease, background-color 0.15s ease !important;
+    box-sizing: border-box !important;
+  }
+  @media (min-width: 640px) {
+    .btn-upsell-green {
+      margin-top: 18px !important;
+      padding: 15px 20px !important;
+      font-size: 16px !important;
+    }
+  }
+  .btn-upsell-green:hover {
+    background-color: #0B6B4A !important;
+    transform: translateY(-1px) !important;
+  }
+  .upsell-basic-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #7B8794 !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    background: transparent !important;
+    border: none !important;
+    padding: 2px 4px;
+    transition: color 0.15s ease;
+  }
+  .upsell-basic-link:hover {
+    color: #52606D !important;
   }
 </style>
 <style id="preview-section-styles">
@@ -1317,44 +1565,80 @@ document.addEventListener('keydown', function(e) {
 
 <!-- MODAL CENTRALIZADO COM FUNDO ESCURECIDO -->
 <div id="modal-upsell" onclick="if(event.target === this) closeUpsellModal(event)" aria-modal="true" role="dialog">
-  <div id="modal-card-box" class="relative w-full max-w-lg rounded-3xl p-6 sm:p-8 text-center border-2 border-cta/30 transition-transform">
+  <div id="modal-card-box" class="relative w-full max-w-lg rounded-3xl text-center transition-transform">
     
     <!-- Botão Fechar (X) -->
-    <button type="button" id="modal-close-btn" onclick="closeUpsellModal(event)" class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/5 hover:bg-black/10 text-muted-foreground hover:text-foreground transition cursor-pointer" aria-label="Fechar">
-      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5">
+    <button type="button" id="modal-close-btn" onclick="closeUpsellModal(event)" class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/5 hover:bg-black/10 text-muted-foreground hover:text-foreground transition cursor-pointer" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5">
         <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
 
-    <!-- Ícone de Destaque -->
-    <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-cta/15 text-cta">
-      <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="12" y1="8" x2="12" y2="12"/>
-        <line x1="12" y1="16" x2="12.01" y2="16"/>
-      </svg>
+    <!-- 1. Selo pequeno laranja -->
+    <div>
+      <span class="upsell-badge-orange">OFERTA SÓ AGORA</span>
     </div>
 
-    <!-- Título -->
-    <h3 class="font-display text-3xl font-extrabold sm:text-4xl text-foreground">
-      Espera!
+    <!-- 2. Título grande -->
+    <h3 class="upsell-title">
+      Espera! Leve as 300 dinâmicas por menos
     </h3>
 
-    <!-- Texto -->
-    <p class="mx-auto mt-4 max-w-md text-base sm:text-lg leading-relaxed text-muted-foreground">
-      Por só <strong class="text-foreground font-extrabold">R$11,10 a mais</strong> você leva o dobro: todas as 300 dinâmicas, guia por faixa etária, planner anual e os 4 bônus.</p>
+    <!-- 3. Comparação lado a lado, em dois blocos -->
+    <div class="upsell-compare-grid">
+      <!-- Bloco cinza -->
+      <div class="upsell-block-gray">
+        <span class="upsell-plan-name-gray">Básico</span>
+        <span class="upsell-plan-sub-gray">50 dinâmicas</span>
+        <span class="upsell-plan-price-gray">R$5,90</span>
+      </div>
 
-    <!-- Botão Principal Grande e Destacado -->
-    <div class="mt-7">
-      <a href="https://tilimcheckout.com/checkout?p=ee0cf26aef5e7daf605f74255723843e" class="btn-cta w-full block py-4 px-6 text-lg sm:text-xl font-extrabold shadow-lg hover:scale-[1.02] transition-transform text-center">
-        Quero o Premium por R$19,90
-      </a>
+      <!-- Bloco verde com borda destacada -->
+      <div class="upsell-block-green">
+        <span class="upsell-plan-name-green">Premium</span>
+        <span class="upsell-plan-sub-green">300 dinâmicas + 4 bônus</span>
+        <span class="upsell-plan-old-price">de <span>R$19,90</span> por</span>
+        <span class="upsell-plan-price-green">R$14,90</span>
+      </div>
     </div>
 
-    <!-- Link Pequeno Embaixo -->
-    <div class="mt-4">
-      <a href="https://tilimcheckout.com/checkout?p=935717b0ac28db1661d72ef981efcaaf" class="text-sm font-semibold text-muted-foreground hover:text-foreground underline underline-offset-4 transition">
-        Não, quero só o Básico
+    <!-- 4. Lista curta com check verde -->
+    <ul class="upsell-checklist">
+      <li>
+        <span class="upsell-check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        <span>6x mais dinâmicas</span>
+      </li>
+      <li>
+        <span class="upsell-check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        <span>De 3 a 12 anos, todas as idades</span>
+      </li>
+      <li>
+        <span class="upsell-check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        <span>Guia por faixa etária e planner anual</span>
+      </li>
+      <li>
+        <span class="upsell-check-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        <span>Pagamento único</span>
+      </li>
+    </ul>
+
+    <!-- 5. Botão verde grande -->
+    <a href="https://tilimcheckout.com/checkout?p=cee78f6bdca2bb516adf8c35ed77cd27" class="btn-upsell-green">
+      QUERO O PREMIUM POR R$14,90
+    </a>
+
+    <!-- 6. Link discreto em cinza sem cor de botão -->
+    <div>
+      <a href="https://tilimcheckout.com/checkout?p=935717b0ac28db1661d72ef981efcaaf" class="upsell-basic-link">
+        Não, quero só o Básico de 50 dinâmicas
       </a>
     </div>
 
